@@ -1,0 +1,54 @@
+Tensorflow Dataset API
+-------------------------
+
+The tensorflow dataset API helps us in writing custom and efficient input pipelines. 
+
+Dataset API is used for: -
+
+$ Creating a Stacked object for Input data and labels.
+
+$ Applying transformations to the data.
+
+$ Iterating over the object to fetch the data
+
+ResNets
+-----------------
+
+It was the time when ‘AlexNet’ was released and people were just trying to build bigger and bigger networks. 
+
+Bigger networks were actually getting better accuracies but there was a limit and after that the errors went higher i.e. no improvement in performance
+
+Issues using Plain Convolutional Networks
+------------------------------------------
+Validation errors for two plain convolutional networks
+18 layers.
+34 layers.
+The error for a 34 layers network is higher compared to 18 layers.
+
+Adding more layers can lead to more complex learning functions which might lead to an overfitting situation
+
+Deeper networks might face an issue backpropagating the gradients, this issue is most commonly called the ‘Vanishing Gradients’ problem.
+
+solution
+----------
+Overfitting can be handled by using regularization and dropout where we deactivate few random neurons to help other neurons learn. 
+‘Vanishing Gradients’ problem can be handled using ‘ReLu’ activation which maximizes the gradient flow, we can use ‘Batch Normalization’ to address this issue as well.
+
+ResNet Background
+-------------
+“A deep network should perform at least equal to its shallow counterparts.
+Consider a Network where Initial layers are the shallow network and remaining layers are Identity functions.”
+
+Deeper ResNet
+------------------
+They are very similar to each other except for the skip connections part.
+
+Plain Networks vs ResNets
+-------------------------------
+There is not much difference in validation errors of plain 18 layers and resnet
+
+Difference starts showing up when we use deeper models like resnet 34 and resnet 50
+
+Validation error for 34 layer resnet is significantly lower compared to its plain counterpart.
+
+Difference will keep increasing with increase in the number of layers
